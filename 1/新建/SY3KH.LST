@@ -1,0 +1,83 @@
+A51 MACRO ASSEMBLER  SY3KH                                                                12/02/2009 09:57:17 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.01
+OBJECT MODULE PLACED IN SY3KH.OBJ
+ASSEMBLER INVOKED BY: C:\Keil4\C51\BIN\A51.EXE SY3KH.ASM SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG   0000H
+0000 D2B7              2           SETB P3.7
+0002 D2B6              3               SETB P3.6
+0004 75803F            4               MOV P0, #3FH
+0007 75A03F            5           MOV P2, #3FH
+000A 758961            6           MOV TMOD, #61H             
+000D 758DC4            7               MOV TH1,#0C4H
+0010 758BC4            8           MOV TL1,#0C4H       
+0013 D28E              9           SETB TR1
+0015 7832             10     LOOP4:MOV R0, #50                                         
+0017 758CBB           11     LOOP1:MOV TH0, #0BBH
+001A 758A00           12               MOV TL0, #00H
+001D D28C             13           SETB TR0
+001F 108D02           14     LOOP2:JBC TF0, LOOP3
+0022 80FB             15               SJMP LOOP2
+0024 D8F1             16     LOOP3:DJNZ R0,LOOP1
+0026 B2B6             17           CPL P3.6
+0028 B2B7             18           CPL P3.7
+002A E58B             19           MOV A, TL1
+002C 94C4             20           SUBB A, #0C4H
+002E FA               21               MOV R2,A
+002F 743C             22               MOV A,#03CH
+0031 9A               23               SUBB A,R2
+0032 F9               24           MOV R1,A
+0033 75F00A           25           MOV B,#10
+0036 84               26           DIV AB
+0037 900048           27           MOV DPTR,#TAB
+003A 93               28           MOVC A,@A+DPTR
+003B F5A0             29           MOV P2,A
+003D E5F0             30           MOV A,B
+003F 93               31           MOVC A,@A+DPTR
+0040 F580             32           MOV P0,A
+0042 F9               33           MOV R1,A
+0043 F4               34           CPL A
+0044 F590             35           MOV P1,A
+0046 80CD             36           SJMP LOOP4
+0048 3F065B4F         37     TAB:DB 3FH, 06H, 5BH, 4FH, 66H, 6DH, 7DH, 07H, 7FH, 6FH
+004C 666D7D07                
+0050 7F6F                    
+                      38     END
+                             
+                             
+A51 MACRO ASSEMBLER  SY3KH                                                                12/02/2009 09:57:17 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+LOOP1. . . . . . .  C ADDR   0017H   A   
+LOOP2. . . . . . .  C ADDR   001FH   A   
+LOOP3. . . . . . .  C ADDR   0024H   A   
+LOOP4. . . . . . .  C ADDR   0015H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+TAB. . . . . . . .  C ADDR   0048H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

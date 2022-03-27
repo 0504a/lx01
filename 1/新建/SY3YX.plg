@@ -1,0 +1,15 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\1900801124\SY3KH\SY3KH.uvproj
+Project File Date:  12/02/2009
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling SY3KH.ASM...
+linking...
+Program Size: data=8.0 xdata=0 code=82
+creating hex file from "SY3YX"...
+"SY3YX" - 0 Error(s), 0 Warning(s).

@@ -1,0 +1,91 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/02/2009  09:57:17  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL4\C51\BIN\BL51.EXE SY3KH.obj TO SY3YX
+
+
+INPUT MODULES INCLUDED:
+  SY3KH.obj (SY3KH)
+
+
+LINK MAP OF MODULE:  SY3YX (SY3KH)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0052H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  SY3YX (SY3KH)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SY3KH
+  D:00F0H         SYMBOL        B
+  C:0017H         SYMBOL        LOOP1
+  C:001FH         SYMBOL        LOOP2
+  C:0024H         SYMBOL        LOOP3
+  C:0015H         SYMBOL        LOOP4
+  D:0080H         SYMBOL        P0
+  D:0090H         SYMBOL        P1
+  D:00A0H         SYMBOL        P2
+  D:00B0H         SYMBOL        P3
+  C:0048H         SYMBOL        TAB
+  B:0088H.5       SYMBOL        TF0
+  D:008CH         SYMBOL        TH0
+  D:008DH         SYMBOL        TH1
+  D:008AH         SYMBOL        TL0
+  D:008BH         SYMBOL        TL1
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
+  B:0088H.6       SYMBOL        TR1
+  C:0000H         LINE#         2
+  C:0002H         LINE#         3
+  C:0004H         LINE#         4
+  C:0007H         LINE#         5
+  C:000AH         LINE#         6
+  C:000DH         LINE#         7
+  C:0010H         LINE#         8
+  C:0013H         LINE#         9
+  C:0015H         LINE#         10
+  C:0017H         LINE#         11
+  C:001AH         LINE#         12
+  C:001DH         LINE#         13
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/02/2009  09:57:17  PAGE 2
+
+
+  C:001FH         LINE#         14
+  C:0022H         LINE#         15
+  C:0024H         LINE#         16
+  C:0026H         LINE#         17
+  C:0028H         LINE#         18
+  C:002AH         LINE#         19
+  C:002CH         LINE#         20
+  C:002EH         LINE#         21
+  C:002FH         LINE#         22
+  C:0031H         LINE#         23
+  C:0032H         LINE#         24
+  C:0033H         LINE#         25
+  C:0036H         LINE#         26
+  C:0037H         LINE#         27
+  C:003AH         LINE#         28
+  C:003BH         LINE#         29
+  C:003DH         LINE#         30
+  C:003FH         LINE#         31
+  C:0040H         LINE#         32
+  C:0042H         LINE#         33
+  C:0043H         LINE#         34
+  C:0044H         LINE#         35
+  C:0046H         LINE#         36
+  -------         ENDMOD        SY3KH
+
+Program Size: data=8.0 xdata=0 code=82
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
